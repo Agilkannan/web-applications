@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vowel Checker | Web Apps</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="../index.html" class="nav-back">&#8592; Home</a>
+        <span class="nav-title">Vowel Checker</span>
+    </nav>
+
+    <main class="app">
+        <div class="card input-card">
+            <h1 class="heading">Vowel <span class="accent">Analyzer</span></h1>
+            <p class="subtitle">Type or paste any text to see its vowel breakdown in real time.</p>
+            <textarea id="inputText" placeholder="Start typing or paste text here..." rows="8" spellcheck="false"></textarea>
+            <button class="analyze-btn" id="analyzeBtn">Analyze</button>
+        </div>
+
+        <div class="stats-row">
+            <div class="stat-card total-card">
+                <span class="stat-number" id="totalVowels">0</span>
+                <span class="stat-label">Vowels</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-number" id="totalChars">0</span>
+                <span class="stat-label">Characters</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-number" id="totalWords">0</span>
+                <span class="stat-label">Words</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-number" id="vowelPercent">0%</span>
+                <span class="stat-label">Vowel Ratio</span>
+            </div>
+        </div>
+
+        <div class="vowel-grid">
+            <div class="vowel-card">
+                <span class="vowel-letter">A</span>
+                <span class="vowel-count" id="countA">0</span>
+                <div class="vowel-bar"><div class="vowel-fill" id="barA"></div></div>
+            </div>
+            <div class="vowel-card">
+                <span class="vowel-letter">E</span>
+                <span class="vowel-count" id="countE">0</span>
+                <div class="vowel-bar"><div class="vowel-fill" id="barE"></div></div>
+            </div>
+            <div class="vowel-card">
+                <span class="vowel-letter">I</span>
+                <span class="vowel-count" id="countI">0</span>
+                <div class="vowel-bar"><div class="vowel-fill" id="barI"></div></div>
+            </div>
+            <div class="vowel-card">
+                <span class="vowel-letter">O</span>
+                <span class="vowel-count" id="countO">0</span>
+                <div class="vowel-bar"><div class="vowel-fill" id="barO"></div></div>
+            </div>
+            <div class="vowel-card">
+                <span class="vowel-letter">U</span>
+                <span class="vowel-count" id="countU">0</span>
+                <div class="vowel-bar"><div class="vowel-fill" id="barU"></div></div>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

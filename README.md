@@ -12,6 +12,7 @@ A collection of mini web applications built with **HTML**, **CSS**, and **JavaSc
 | 4  | [To-Do List](simple-todolist/) | Add, remove, and manage tasks with local storage persistence | [Open](simple-todolist/index.html) |
 | 5  | [Code Editor](code-editor/) | A live HTML, CSS & JavaScript editor with real-time preview | [Open](code-editor/index.html) |
 | 6  | [Weather App](weather-app/) | Real-time weather with 5-day forecast, location detection, and unit toggle | [Open](weather-app/index.html) |
+| 7  | [Vowel Checker](vowel-checker/) | Text vowel analyzer with per-letter count breakdown and frequency bars | [Open](vowel-checker/index.html) |
 
 ## Tech Stack
 
@@ -63,6 +64,10 @@ web-applications/
 │   ├── script.js
 │   └── style.css
 ├── weather-app/
+│   ├── index.html
+│   ├── script.js
+│   └── style.css
+├── vowel-checker/
 │   ├── index.html
 │   ├── script.js
 │   └── style.css
