@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App | Web Apps</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="../index.html" class="nav-back">&#8592; Home</a>
+        <span class="nav-title">Weather</span>
+    </nav>
+
+    <main class="app">
+        <div class="search-section">
+            <div class="search-box">
+                <input type="text" id="cityInput" placeholder="Search city..." autocomplete="off">
+                <button id="searchBtn" class="search-btn">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                </button>
+                <button id="locationBtn" class="location-btn" title="Use my location">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+                </button>
+                <div id="historyDropdown" class="history-dropdown"></div>
+                <div id="suggestionsDropdown" class="suggestions-dropdown"></div>
+            </div>
+            <button id="unitToggle" class="unit-toggle">°C</button>
+        </div>
+
+        <div id="errorMsg" class="error-msg"></div>
+
+        <div id="currentWeather" class="current-weather hidden">
+            <div class="weather-main">
+                <div class="weather-icon-wrap">
+                    <img id="weatherIcon" src="" alt="weather icon">
+                </div>
+                <div class="weather-temp">
+                    <span id="temperature" class="temp-value"></span>
+                    <span id="tempUnit" class="temp-unit">°C</span>
+                </div>
+                <p id="condition" class="condition"></p>
+                <p id="cityName" class="city-name"></p>
+            </div>
+            <div class="weather-details">
+                <div class="detail-card">
+                    <span class="detail-label">Humidity</span>
+                    <span id="humidity" class="detail-value"></span>
+                </div>
+                <div class="detail-card">
+                    <span class="detail-label">Wind</span>
+                    <span id="wind" class="detail-value"></span>
+                </div>
+                <div class="detail-card">
+                    <span class="detail-label">Feels Like</span>
+                    <span id="feelsLike" class="detail-value"></span>
+                </div>
+                <div class="detail-card">
+                    <span class="detail-label">Pressure</span>
+                    <span id="pressure" class="detail-value"></span>
+                </div>
+            </div>
+        </div>
+
+        <div id="forecast" class="forecast hidden">
+            <h3 class="forecast-title">5-Day Forecast</h3>
+            <div id="forecastCards" class="forecast-cards"></div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

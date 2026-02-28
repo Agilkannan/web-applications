@@ -11,12 +11,14 @@ A collection of mini web applications built with **HTML**, **CSS**, and **JavaSc
 | 3  | [Password Generator](password-generator/) | Generate strong passwords with customizable length and character type options | [Open](password-generator/index.html) |
 | 4  | [To-Do List](simple-todolist/) | Add, remove, and manage tasks with local storage persistence | [Open](simple-todolist/index.html) |
 | 5  | [Code Editor](code-editor/) | A live HTML, CSS & JavaScript editor with real-time preview | [Open](code-editor/index.html) |
+| 6  | [Weather App](weather-app/) | Real-time weather with 5-day forecast, location detection, and unit toggle | [Open](weather-app/index.html) |
 
 ## Tech Stack
 
 - HTML5
 - CSS3 (Flexbox, Grid, CSS Variables, Transitions, Animations)
 - Vanilla JavaScript (DOM Manipulation, Event Handling, Local Storage)
+- OpenWeatherMap API (Weather App)
 
 ## Getting Started
 
@@ -57,6 +59,10 @@ web-applications/
 │   ├── script.js
 │   └── style.css
 ├── code-editor/
+│   ├── index.html
+│   ├── script.js
+│   └── style.css
+├── weather-app/
 │   ├── index.html
 │   ├── script.js
 │   └── style.css
