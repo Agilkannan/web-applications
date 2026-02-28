@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List | Web Apps</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="../index.html" class="nav-back">&#8592; Home</a>
+        <span class="nav-title">To-Do List</span>
+    </nav>
+    <main class="main">
+        <div class="container">
+            <h1>To-Do List</h1>
+            <p class="subtitle">Stay organized and productive</p>
+            <div class="input-container">
+                <input type="text" id="todoInput" placeholder="What needs to be done?" aria-label="New Task">
+                <button id="addBtn" aria-label="Add Task">Add</button>
+            </div>
+            <ul id="todoList"></ul>
+            <div class="footer-actions">
+                <span id="taskCount" class="task-count"></span>
+                <button id="clearAllBtn" class="clear-btn" aria-label="Clear All Tasks">Clear All</button>
+            </div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
+

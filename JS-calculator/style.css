@@ -1,0 +1,194 @@
+:root {
+    --bg: #FFFBF5;
+    --surface: #FFFFFF;
+    --ink: #1A1715;
+    --ink-secondary: #7A756E;
+    --accent: #E84820;
+    --accent-hover: #D03D18;
+    --accent-soft: #FFF0EB;
+    --border: #E8E2DB;
+    --muted: #F5F0EB;
+    --error: #DC2626;
+    --error-soft: #FEF2F2;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    min-height: 100vh;
+}
+
+.navbar {
+    padding: 14px 28px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    border-bottom: 1px solid var(--border);
+}
+
+.nav-back {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 14px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: gap 0.25s ease;
+}
+
+.nav-back:hover {
+    gap: 10px;
+}
+
+.nav-title {
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--ink-secondary);
+    font-weight: 500;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 49px);
+    padding: 32px 20px;
+}
+
+.calculator {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 24px;
+    box-shadow: 0 4px 32px rgba(26, 23, 21, 0.05);
+    width: 320px;
+    opacity: 0;
+    animation: slideIn 0.6s ease forwards 0.1s;
+}
+
+.display-container {
+    margin-bottom: 16px;
+}
+
+#display {
+    width: 100%;
+    padding: 22px 18px;
+    font-size: 32px;
+    text-align: right;
+    border: none;
+    border-radius: 12px;
+    background: var(--muted);
+    color: var(--ink);
+    font-weight: 600;
+    outline: none;
+    font-family: 'Fraunces', serif;
+    letter-spacing: -1px;
+}
+
+#display::placeholder {
+    color: #B8B3AD;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.btn {
+    height: 58px;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    font-size: 18px;
+    font-weight: 500;
+    font-family: 'Outfit', sans-serif;
+    cursor: pointer;
+    background: var(--surface);
+    color: var(--ink);
+    transition: all 0.15s ease;
+}
+
+.btn:hover {
+    background: var(--muted);
+    border-color: #D5CFC8;
+}
+
+.btn:active {
+    transform: scale(0.93);
+}
+
+.btn-clear {
+    background: var(--error-soft);
+    color: var(--error);
+    border-color: transparent;
+    font-weight: 600;
+}
+
+.btn-clear:hover {
+    background: #FEE2E2;
+}
+
+.btn-action {
+    background: var(--muted);
+    color: var(--accent);
+    border-color: transparent;
+    font-weight: 600;
+}
+
+.btn-action:hover {
+    background: var(--accent-soft);
+}
+
+.btn-operator {
+    background: var(--accent-soft);
+    color: var(--accent);
+    border-color: transparent;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.btn-operator:hover {
+    background: #FFE0D6;
+}
+
+.btn-equals {
+    background: var(--accent);
+    color: #fff;
+    border-color: transparent;
+    font-weight: 700;
+    font-size: 22px;
+}
+
+.btn-equals:hover {
+    background: var(--accent-hover);
+}
+
+@keyframes slideIn {
+    from { opacity: 0; transform: translateY(16px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 380px) {
+    .calculator {
+        width: 100%;
+        padding: 16px;
+        border-radius: 16px;
+    }
+    .btn {
+        height: 50px;
+        font-size: 16px;
+    }
+    #display {
+        font-size: 26px;
+        padding: 18px 14px;
+    }
+}

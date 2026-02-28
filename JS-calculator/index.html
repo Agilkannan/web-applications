@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator | Web Apps</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="../index.html" class="nav-back">&#8592; Home</a>
+        <span class="nav-title">Calculator</span>
+    </nav>
+    <main class="main">
+        <div class="calculator">
+            <div class="display-container">
+                <input type="text" id="display" readonly placeholder="0">
+            </div>
+            <div class="buttons">
+                <button onclick="displayClear()" class="btn btn-clear">C</button>
+                <button onclick="deleteLast()" class="btn btn-action">&#9003;</button>
+                <button onclick="displayValue('/')" class="btn btn-operator">&#247;</button>
+                <button onclick="displayValue('*')" class="btn btn-operator">&#215;</button>
+                <button onclick="displayValue('7')" class="btn">7</button>
+                <button onclick="displayValue('8')" class="btn">8</button>
+                <button onclick="displayValue('9')" class="btn">9</button>
+                <button onclick="displayValue('-')" class="btn btn-operator">&#8722;</button>
+                <button onclick="displayValue('4')" class="btn">4</button>
+                <button onclick="displayValue('5')" class="btn">5</button>
+                <button onclick="displayValue('6')" class="btn">6</button>
+                <button onclick="displayValue('+')" class="btn btn-operator">+</button>
+                <button onclick="displayValue('1')" class="btn">1</button>
+                <button onclick="displayValue('2')" class="btn">2</button>
+                <button onclick="displayValue('3')" class="btn">3</button>
+                <button onclick="Calculate()" class="btn btn-equals" style="grid-row: span 2;">&#61;</button>
+                <button onclick="displayValue('0')" class="btn" style="grid-column: span 2;">0</button>
+                <button onclick="displayValue('.')" class="btn">.</button>
+            </div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

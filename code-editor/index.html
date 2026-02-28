@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Editor | Web Apps</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=JetBrains+Mono:wght@400;500;600&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="../index.html" class="nav-back">&#8592; Home</a>
+        <span class="nav-title">Code Editor</span>
+        <button id="runBtn" class="run-btn" title="Run code"><i class="fa-solid fa-play"></i> Run</button>
+    </nav>
+    <div class="container">
+        <div class="editors">
+            <div class="box">
+                <div class="box-header">
+                    <i class="fa-brands fa-html5" style="color:#e44d26;"></i>
+                    <span>HTML</span>
+                </div>
+                <textarea id="html-code" placeholder="Write HTML here..." spellcheck="false"></textarea>
+            </div>
+            <div class="box">
+                <div class="box-header">
+                    <i class="fa-brands fa-css3-alt" style="color:#264de4;"></i>
+                    <span>CSS</span>
+                </div>
+                <textarea id="css-code" placeholder="Write CSS here..." spellcheck="false"></textarea>
+            </div>
+            <div class="box">
+                <div class="box-header">
+                    <i class="fa-brands fa-js" style="color:#f7df1e;"></i>
+                    <span>JavaScript</span>
+                </div>
+                <textarea id="js-code" placeholder="Write JavaScript here..." spellcheck="false"></textarea>
+            </div>
+        </div>
+        <div class="preview">
+            <div class="box-header">
+                <i class="fa-solid fa-eye" style="color:#6366f1;"></i>
+                <span>Output</span>
+            </div>
+            <iframe id="output"></iframe>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

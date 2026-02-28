@@ -1,0 +1,204 @@
+:root {
+    --bg: #FFFBF5;
+    --surface: #FFFFFF;
+    --ink: #1A1715;
+    --ink-secondary: #7A756E;
+    --accent: #E84820;
+    --accent-hover: #D03D18;
+    --accent-soft: #FFF0EB;
+    --border: #E8E2DB;
+    --muted: #F5F0EB;
+    --error: #DC2626;
+    --error-soft: #FEF2F2;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    min-height: 100vh;
+}
+
+.navbar {
+    padding: 14px 28px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    border-bottom: 1px solid var(--border);
+}
+
+.nav-back {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 14px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: gap 0.25s ease;
+}
+
+.nav-back:hover {
+    gap: 10px;
+}
+
+.nav-title {
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--ink-secondary);
+    font-weight: 500;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 49px);
+    padding: 32px 20px;
+}
+
+.container {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 44px;
+    box-shadow: 0 4px 32px rgba(26, 23, 21, 0.05);
+    max-width: 440px;
+    width: 100%;
+    opacity: 0;
+    animation: slideIn 0.6s ease forwards 0.1s;
+}
+
+h1 {
+    font-family: 'Fraunces', serif;
+    text-align: center;
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--ink);
+    margin-bottom: 4px;
+    letter-spacing: -0.5px;
+}
+
+.subtitle {
+    text-align: center;
+    color: var(--ink-secondary);
+    font-size: 14px;
+    margin-bottom: 32px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    font-size: 11px;
+    color: var(--ink-secondary);
+    margin-bottom: 8px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 13px 16px;
+    border-radius: 10px;
+    border: 1.5px solid var(--border);
+    font-size: 15px;
+    font-family: 'Outfit', sans-serif;
+    color: var(--ink);
+    background: var(--bg);
+    transition: border-color 0.2s, box-shadow 0.2s, background 0.2s;
+    outline: none;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(232, 72, 32, 0.08);
+    background: var(--surface);
+}
+
+.form-group input::placeholder {
+    color: #B8B3AD;
+}
+
+.calc-btn {
+    width: 100%;
+    padding: 15px;
+    background: var(--accent);
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    font-family: 'Outfit', sans-serif;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.15s;
+    margin-top: 8px;
+}
+
+.calc-btn:hover {
+    background: var(--accent-hover);
+}
+
+.calc-btn:active {
+    transform: scale(0.98);
+}
+
+.result {
+    margin-top: 28px;
+    padding: 24px;
+    background: var(--accent-soft);
+    border-radius: 12px;
+    text-align: center;
+    border: 1px solid rgba(232, 72, 32, 0.1);
+    animation: resultPop 0.4s ease;
+}
+
+.result-label {
+    font-size: 11px;
+    color: var(--ink-secondary);
+    margin-bottom: 6px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 500;
+}
+
+.result-amount {
+    font-family: 'Fraunces', serif;
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--accent);
+}
+
+.result-detail {
+    font-size: 13px;
+    color: var(--ink-secondary);
+    margin-top: 8px;
+}
+
+@keyframes slideIn {
+    from { opacity: 0; transform: translateY(16px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes resultPop {
+    from { opacity: 0; transform: scale(0.96); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+@media (max-width: 480px) {
+    .container { padding: 28px 20px; }
+    h1 { font-size: 22px; }
+    .result-amount { font-size: 26px; }
+}
